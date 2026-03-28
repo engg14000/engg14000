@@ -1,21 +1,33 @@
-# Action Log & Agent Communication
+Portfolio v3 Update - 2026-03-29
+=================================
 
-## [Current Phase: Completed Initial Portfolio Redesign]
+COMPLETED CHANGES (v3):
+1. Logo: Changed from {aarif} to clean "AARIF" with orange-to-red gradient underline
+2. Brands: Changed "Trusted by Global Brands" to "Brands I Spent Time With"
+3. Brand Logos: Switched all logos to img.icons8.com for reliability (kroger, primark, nhs, keppel, homedepot, ey, deloitte, wipro)
+4. Moat: Chapter opener quote now reads "Critical thinking is your moat. In a world of AI answers, the real advantage is asking better questions."
+5. Medium Profile: Added to nav (Writing link), footer (Medium link), and dedicated blog section
+6. Blog Section: Added "07 / WRITING - Thoughts from the Frontier" with 4 article cards using local images from medium/ folder
+   - Critical Thinking is your Moat (Philosophy)
+   - The Nuclear Paradox (Geopolitics)
+   - Nifty's 2025 Time Correction (Capital Markets)
+   - Monero's Lost Mojo (Blockchain + Crypto)
+7. Interests Section: Added "08 / BEYOND CODE - What Fuels My Thinking"
+   - Capital Markets, Blockchain + Crypto, Frontier Tech, Global Politics
+8. Yellow Highlight: Fixed and verified - now uses stronger opacity (0.30/0.50 + !important overrides + box-shadow)
+   - Works on: strength cards, skill rows, tool pills, cert cards, project cards, stat items
+9. Hero text highlights use gradient underline technique (bottom 40% yellow fill)
+10. Medium URL: https://the-globe-and-algo-frontier.medium.com/
 
-**Completed Work:**
-- Redesigned portfolio to blend Zak's depth (bento grids, brand logos, timeline) with Rifath's elegant minimalism (pill shapes, clean typography).
-- Created a separate `styles.css` file (`d:\usr_aar\personal_projects\engg14000.github.io\styles.css`) containing the full design system.
-- Overhauled `index.html` to include:
-  - **Navigation & Marquee:** Glassmorphic sticky nav and a scrolling tech stack marquee.
-  - **Hero Section:** Clean typography with bento preview cards.
-  - **Brands:** Added Kroger, Primark, NHS Scotland, Keppel, and Home Depot with logos.
-  - **Strengths:** 6-card bento grid highlighting core competencies.
-  - **Experience:** Added a detailed timeline covering EY, Deloitte, and Wipro.
-  - **Skills:** Progress bars combined with dynamic real icons for various stack elements (AI, Data, Cloud).
-  - **Certifications:** Added verifiable cards for Data Engineer, GenAI Engineer, Microsoft Fabric, and Neo4j, complete with Credly/Accredible wallet links.
-  - **Featured Projects & Additional Works:** Handled GitHub repos (SatoshiClaw, SuperRecursive, TruWealthily.io, etc.) through a dark-themed card grid.
-- Verified functionality and layout responsivenes locally using screenshots via a local server test.
-- The latest changes have been committed and pushed to the `main` branch.
+SECTION ORDER:
+01 / STRENGTHS > Stats > 02 / EXPERIENCE > 03 / SKILLS > 04 / CERTIFICATIONS > 05 / PROJECTS > 06 / ADDITIONAL WORKS > 07 / WRITING > 08 / BEYOND CODE > 09 / ABOUT > Footer
 
-**Next Steps / Open Items:**
-- The portfolio redesign has been shipped. Awaiting further instruction from the user on any additional refinements or new features.
+PREVIOUS CHANGES (v1-v2):
+- AI-Data Prodigy tagline
+- Orange+Red dual accents
+- No em-dashes
+- Removed airflow_dags & analytics-repo
+- Added CyberAI coming-soon card
+- Expanded 16-skill grid
+- Removed duplicate cert card
+- Enhanced content from resume data
