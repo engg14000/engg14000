@@ -71,19 +71,23 @@ nav {
   transition: var(--transition-smooth);
 }
 
-/* ── New Logo: AARIF with gradient underline ── */
+/* ── New Logo: SVG monogram + AARIF text ── */
 .nav-logo {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800; font-size: 1.25rem;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  display: flex; align-items: center; gap: 0;
+  font-weight: 800; font-size: 1.1rem;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 10px;
   color: var(--text-primary);
+  text-decoration: none;
+}
+.nav-logo svg { flex-shrink: 0; }
+.nav-logo .logo-text {
   position: relative;
 }
-.nav-logo::after {
+.nav-logo .logo-text::after {
   content: '';
-  position: absolute; bottom: -4px; left: 0; right: 0;
-  height: 3px;
+  position: absolute; bottom: -3px; left: 0; right: 0;
+  height: 2.5px;
   background: linear-gradient(90deg, var(--accent-orange), var(--accent-red));
   border-radius: 2px;
 }
@@ -429,7 +433,7 @@ h2 {
 }
 .work-card.coming-soon .work-card-title { color: var(--accent-red); font-size: 1.1rem; margin-bottom: 4px; }
 .work-card.coming-soon .work-card-desc { color: rgba(255,255,255,0.5); font-size: 0.78rem; }
-.coming-soon-icon { font-size: 2rem; margin-bottom: 12px; animation: pulse-glow 2s ease-in-out infinite; }
+.coming-soon-icon { font-size: 2rem; margin-bottom: 12px; animation: pulse-glow 2s ease-in-out infinite; display: flex; align-items: center; justify-content: center; }
 @keyframes pulse-glow {
   0%, 100% { filter: drop-shadow(0 0 4px rgba(230,57,70,0.3)); }
   50% { filter: drop-shadow(0 0 12px rgba(230,57,70,0.6)); }
