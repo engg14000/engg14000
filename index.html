@@ -15,6 +15,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet"/>
 </head>
 <body>
+<script>
+  (function() {
+    const theme = localStorage.getItem('portfolio-theme') || 'light';
+    if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  })();
+</script>
 
 <!-- ═══ NAVIGATION ═══ -->
 <nav id="navbar">
@@ -33,6 +39,11 @@
     <li><a href="#about">About</a></li>
     <li><a href="https://www.linkedin.com/in/aarifmr" target="_blank" class="nav-cta">LinkedIn ↗</a></li>
     <li><a href="https://github.com/engg14000" target="_blank" class="nav-cta-secondary">GitHub ↗</a></li>
+    <li>
+      <button id="themeToggle" class="theme-toggle" title="Switch Theme">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </li>
   </ul>
 </nav>
 
@@ -875,7 +886,7 @@
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="footer-left">Designed to be read. Built to be shipped.</div>
+  <div class="footer-left">Architecting the intersection of Data, Security, and AI.</div>
   <div class="footer-links">
     <a href="https://github.com/engg14000" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/aarifmr" target="_blank">LinkedIn</a>
@@ -884,7 +895,7 @@
     <a href="https://www.credly.com/users/mohamed-aarif-r.6a0f687c" target="_blank">Credly</a>
   </div>
   <div class="footer-copy">
-    © 2026 Mohamed Aarif. System designed globally, powered locally.
+    © 2026 Mohamed Aarif. Modern Engineer for a Multi-Cloud, Multi-Agent World.
   </div>
 </footer>
 
@@ -1044,6 +1055,34 @@ if (connectBtn && connectMenu) {
   });
   document.addEventListener('click', () => connectMenu.classList.remove('active'));
 }
+
+// ── Theme Toggle Logic ──
+const themeBtn = document.getElementById('themeToggle');
+const themeIcon = themeBtn.querySelector('.theme-icon');
+const htmlTag = document.documentElement;
+
+// Initialize
+const initialTheme = localStorage.getItem('portfolio-theme') || 'light';
+if (initialTheme === 'dark') {
+  htmlTag.setAttribute('data-theme', 'dark');
+  themeIcon.textContent = '☀️';
+} else {
+  htmlTag.removeAttribute('data-theme');
+  themeIcon.textContent = '🌙';
+}
+
+themeBtn.addEventListener('click', () => {
+  const isDark = htmlTag.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    htmlTag.removeAttribute('data-theme');
+    themeIcon.textContent = '🌙';
+    localStorage.setItem('portfolio-theme', 'light');
+  } else {
+    htmlTag.setAttribute('data-theme', 'dark');
+    themeIcon.textContent = '☀️';
+    localStorage.setItem('portfolio-theme', 'dark');
+  }
+});
 </script>
 
 </body>
